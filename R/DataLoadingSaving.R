@@ -184,6 +184,7 @@ getDbCohortMethodData <- function(connectionDetails,
                                                    remove_duplicate_subjects = removeDuplicateSubjects,
                                                    washout_period = washoutPeriod,
                                                    restrict_to_common_period = restrictToCommonPeriod)
+  writeLines(paste("CreateCohorts renderedSql:", renderedSql, sep = ""))
   DatabaseConnector::executeSql(connection, renderedSql)
 
   writeLines("Fetching cohorts from server")
