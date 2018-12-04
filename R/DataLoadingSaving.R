@@ -263,6 +263,7 @@ getDbCohortMethodData <- function(connectionDetails,
                                                   outcome_table = outcomeTable,
                                                   outcome_ids = outcomeIds,
                                                   cdm_version = cdmVersion)
+  writeLines(paste("Outcomes outcomeSql:", outcomeSql, sep = ""))
   outcomes <- DatabaseConnector::querySql(connection, outcomeSql)
   colnames(outcomes) <- SqlRender::snakeCaseToCamelCase(colnames(outcomes))
   metaData <- data.frame(outcomeIds = outcomeIds)
