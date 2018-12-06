@@ -75,6 +75,11 @@ createPs <- function(cohortMethodData,
   if (!("treatment" %in% colnames(population)))
     stop("Missing column treatment in population")
 
+  if (nrow(cohortMethodData$covariates) == 0 )
+  {
+	  return("no covariates or all covariates less than covariatesSmallCount(default 100)")
+  }
+
   start <- Sys.time()
   if (!Cyclops::isSorted(population, "rowId")) {
     population <- population[order(population$rowId), ]
