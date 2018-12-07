@@ -107,7 +107,7 @@ fitOutcomeModel <- function(population,
     status <- "NO SUBJECTS IN POPULATION, CANNOT FIT"
   } else if (sum(population$y) == 0) {
 	#NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
-    status <- "Ä¿±ê¶ÓÁÐºÍ±È½Ï¶ÓÁÐ¾ùÎ´³öÏÖÑÐ¾¿½á¾Ö£¬Ä£ÐÍÎÞ·¨ÄâºÏ!" 
+    status <- "ç›®æ ‡é˜Ÿåˆ—å’Œæ¯”è¾ƒé˜Ÿåˆ—å‡æœªå‡ºçŽ°ç ”ç©¶ç»“å±€ï¼Œæ¨¡åž‹æ— æ³•æ‹Ÿåˆ!" 
   } else {
     if (useCovariates) {
       treatmentVarId <- ffbase::max.ff(cohortMethodData$covariates$covariateId) + 1

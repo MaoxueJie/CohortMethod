@@ -219,7 +219,7 @@ getDbCohortMethodData <- function(connectionDetails,
 	
 	if (nrow(rawCount) != 2)
 	{
-		return("Ä¿±ê¶ÓÁÐ»ò±È½Ï¶ÓÁÐÎÞ·ûºÏÌõ¼þµÄÑÐ¾¿¶ÔÏó!")
+		return("ç›®æ ‡é˜Ÿåˆ—æˆ–æ¯”è¾ƒé˜Ÿåˆ—æ— ç¬¦åˆæ¡ä»¶çš„ç ”ç©¶å¯¹è±¡!")
 	}
     
 	counts <- data.frame(description = "Original cohorts",
