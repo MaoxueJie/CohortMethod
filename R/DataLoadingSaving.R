@@ -216,7 +216,13 @@ getDbCohortMethodData <- function(connectionDetails,
                                                      study_end_date = studyEndDate)
     rawCount <- DatabaseConnector::querySql(connection, rawCountSql)
     colnames(rawCount) <- SqlRender::snakeCaseToCamelCase(colnames(rawCount))
-    counts <- data.frame(description = "Original cohorts",
+	
+	if (nrows(rawCount) != 2)
+	{
+		return("no treatedPersons or comparatorPersons")
+	}
+    
+	counts <- data.frame(description = "Original cohorts",
                          treatedPersons = rawCount$exposedCount[rawCount$treatment ==
       1], comparatorPersons = rawCount$exposedCount[rawCount$treatment == 0], treatedExposures = rawCount$exposureCount[rawCount$treatment ==
       1], comparatorExposures = rawCount$exposureCount[rawCount$treatment == 0])
