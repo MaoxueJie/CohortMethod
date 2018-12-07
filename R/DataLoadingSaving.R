@@ -217,7 +217,7 @@ getDbCohortMethodData <- function(connectionDetails,
     rawCount <- DatabaseConnector::querySql(connection, rawCountSql)
     colnames(rawCount) <- SqlRender::snakeCaseToCamelCase(colnames(rawCount))
 	
-	if (nrows(rawCount) != 2)
+	if (nrow(rawCount) != 2)
 	{
 		return("no treatedPersons or comparatorPersons")
 	}
