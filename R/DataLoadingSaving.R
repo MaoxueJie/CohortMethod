@@ -219,7 +219,7 @@ getDbCohortMethodData <- function(connectionDetails,
 	
 	if (nrow(rawCount) != 2)
 	{
-		return("目标队列或比较队列无符合条件的研究对象!")
+		return("目标队列或比较队列无符合条件的研究对象。")
 	}
     
 	counts <- data.frame(description = "Original cohorts",

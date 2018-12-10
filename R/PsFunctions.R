@@ -77,7 +77,7 @@ createPs <- function(cohortMethodData,
 
   if (nrow(cohortMethodData$covariates) == 0 )
   {
-	  return("PS匹配没有选定协变量或者所有协变量可用观测数少于最低限定值(默认100)，因此结局模型中给定的结果是未使用PS匹配的结果!")
+	  return("PS匹配未选定协变量或所有协变量可用观测数少于最低限定值(默认100)，结局模型中给出的是未使用PS匹配的结果。")
   }
 
   start <- Sys.time()

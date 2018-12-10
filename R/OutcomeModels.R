@@ -107,7 +107,7 @@ fitOutcomeModel <- function(population,
     status <- "NO SUBJECTS IN POPULATION, CANNOT FIT"
   } else if (sum(population$y) == 0) {
 	#NO OUTCOMES FOUND FOR POPULATION, CANNOT FIT
-    status <- "目标队列和比较队列均未出现研究结局，模型无法拟合!" 
+    status <- "目标队列和比较队列均未出现研究结局，模型无法拟合。" 
   } else {
     if (useCovariates) {
       treatmentVarId <- ffbase::max.ff(cohortMethodData$covariates$covariateId) + 1
